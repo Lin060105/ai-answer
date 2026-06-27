@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "AI Screenshot Helper",
+  "description": "Capture an area of the current page and ask Gemini Vision to analyze it.",
+  "version": "1.0.0",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "ui.html",
+        "style.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "commands": {
+    "start-capture": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1"
+      },
+      "description": "Start AI Screenshot Helper capture"
+    }
+  }
+}

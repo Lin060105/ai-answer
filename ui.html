@@ -1,0 +1,40 @@
+<section class="ai-helper-panel" aria-label="AI Screenshot Helper">
+  <header class="ai-helper-titlebar" data-drag-handle>
+    <div>
+      <strong>AI Screenshot Helper</strong>
+      <span>Gemini Vision</span>
+    </div>
+    <button class="ai-helper-icon-button" id="aiHelperCollapseButton" type="button" title="Minimize">-</button>
+  </header>
+
+  <div class="ai-helper-body" id="aiHelperBody">
+    <div class="ai-helper-chat" id="aiHelperChatLog" aria-live="polite"></div>
+
+    <figure class="ai-helper-preview" id="aiHelperPreview" hidden>
+      <img id="aiHelperPreviewImage" alt="Captured area preview">
+      <figcaption>Selected screenshot</figcaption>
+    </figure>
+
+    <div class="ai-helper-input-row">
+      <textarea id="aiHelperPromptInput" rows="4" placeholder="Enter a question or instruction for Gemini..."></textarea>
+    </div>
+
+    <div class="ai-helper-actions">
+      <button id="aiHelperCaptureButton" type="button">截圖</button>
+      <button id="aiHelperSendButton" type="button" class="ai-helper-primary">送出</button>
+    </div>
+
+    <details class="ai-helper-settings">
+      <summary>Gemini API 設定</summary>
+      <div class="ai-helper-settings-row">
+        <input id="aiHelperApiKeyInput" type="password" autocomplete="off" placeholder="貼上 Gemini API Key">
+        <button id="aiHelperSaveKeyButton" type="button">儲存</button>
+      </div>
+      <div class="ai-helper-settings-row">
+        <input id="aiHelperModelInput" type="text" autocomplete="off" placeholder="模型名稱，例如 gemini-flash-latest">
+        <button id="aiHelperSaveModelButton" type="button">套用</button>
+      </div>
+      <p id="aiHelperKeyStatus" class="ai-helper-status"></p>
+    </details>
+  </div>
+</section>
