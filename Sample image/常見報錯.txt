@@ -1,0 +1,7 @@
+Gemini API 錯誤：This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+
+這個是伺服器端的流量限制
+解決的方法有三個
+等他、付費買token
+或是在模型的地方改成 gemini-3.1-flash-lite
+（pro版本的模型都要付費）

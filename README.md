@@ -165,7 +165,7 @@ gemini-2.5-flash
 ├── docs/
 │   ├── GEMINI_API_KEY.md
 │   └── ULEARN_USAGE.md
-└── 新增資料夾/
+└── Sample image/
     ├── step1.jpg
     ├── step2.jpg
     ├── step3.jpg
