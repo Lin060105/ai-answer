@@ -39,25 +39,25 @@ git clone https://github.com/Lin060105/AI-Screenshot-Helper.git
 chrome://extensions
 ```
 
-### 3. 開啟開發人員模式
+或是從這裡點進去
 
-在右上角打開 **開發人員模式**。
+![開啟擴充功能](Sample%20image/stepA.jpg)
 
-![開啟 Chrome 擴充功能開發人員模式](Sample%20image/stepA.jpg)
+### 3. 開啟開發人員模式並點選載入未封裝項目
 
-### 4. 載入未封裝項目
-
-點選 **載入未封裝項目**。
+在右上角打開 **開發人員模式** 後點選 **載入未封裝項目** 。
 
 ![點選載入未封裝項目](Sample%20image/stepB.jpg)
 
-### 5. 選擇專案資料夾
+### 4. 選擇專案資料夾
+
+點選 **載入未封裝項目**。
 
 選擇這個專案資料夾，也就是包含 `manifest.json` 的那一層資料夾。
 
 ![選擇擴充功能資料夾](Sample%20image/stepC.jpg)
 
-### 6. 設定 Gemini API Key
+### 5. 設定 Gemini API Key
 
 安裝完成後，打開任意一般網頁，右下角會出現 AI Screenshot Helper 的小按鈕。
 
@@ -67,11 +67,11 @@ chrome://extensions
 
 [如何申請 Gemini API Key](docs/GEMINI_API_KEY.md)
 
-### 7. 開始使用
+### 6. 開始使用
 
 1. 開啟任意一般網頁。
 2. 點開右下角的 AI Screenshot Helper。
-3. 按 **截圖**，或按快捷鍵 `Ctrl+Shift+1`。
+3. 按 **截圖** 。
 4. 用滑鼠拖曳選取想分析的畫面區域。
 5. 輸入你的問題。
 6. 按 **送出**，等待 Gemini 回覆。
@@ -88,11 +88,13 @@ chrome://extensions
 gemini-flash-latest
 ```
 
-如果你的 API Key 無法使用這個模型，可以在面板中的模型欄位改成其他可用模型，例如：
+如果無法使用這個模型，可以在面板中的模型欄位改成其他可用模型，例如：
 
 ```text
 gemini-2.5-flash
 ```
+
+詳細請看 [如何申請 Gemini API Key](docs/GEMINI_API_KEY.md) ，內有除錯教學
 
 ## 權限說明
 
@@ -110,46 +112,6 @@ Gemini API Key 只會儲存在 Chrome 的本機擴充功能儲存空間，也就
 這個專案不會把你的 API Key 存進程式碼，也不會上傳到 GitHub。
 
 只有在你按下 **送出** 時，截圖內容與文字問題才會送到 Google Gemini API。
-
-## 常見問題
-
-### Gemini API 顯示 high demand
-
-如果出現類似訊息：
-
-```text
-This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
-```
-
-代表目前模型需求量較高，通常是暫時性的。你可以稍後再試，或改用其他可用模型。
-
-### 回覆被中斷或內容不完整
-
-可能是模型負載過高、輸入內容太長，或截圖中的資訊太多。可以嘗試：
-
-- 縮小截圖範圍，只截需要分析的區塊。
-- 簡化問題。
-- 稍後再送出一次。
-
-### 出現 token 或內容長度相關錯誤
-
-請減少截圖範圍或縮短提問文字。截圖越大、文字越多，模型需要處理的內容就越多。
-
-### 模型名稱不能使用
-
-如果你填的模型名稱無法使用，請改回：
-
-```text
-gemini-flash-latest
-```
-
-或嘗試：
-
-```text
-gemini-2.5-flash
-```
-
-可用模型會依 Google 帳號、地區、API 狀態而不同。
 
 ## 專案結構
 
