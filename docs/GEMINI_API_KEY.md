@@ -66,11 +66,7 @@
 
 ## 7. 測試是否成功
 
-你可以先選取一小塊網頁畫面，然後輸入：
-
-```text
-請描述這張截圖裡有什麼。
-```
+可以先選取練習題或是考古題的題目，然後送出，看有沒有答案出來：
 
 如果 Gemini 正常回覆，代表 API Key 設定成功。
 
@@ -83,19 +79,12 @@
 ```text
 gemini-2.5-flash
 ```
-
-或回到 Google AI Studio 確認你的 API Key 可用的模型。
+或是
+```text
+gemini-3.1-flash-lite
+```
+但準確率都更低。
 
 ### 出現 API Key 錯誤
 
-請確認：
-
-- API Key 沒有多複製空白或換行。
-- API Key 沒有被刪除或停用。
-- 你的 Google 帳號與專案可以使用 Gemini API。
-
-### 需要付費嗎
-
-Gemini API 的免費額度與計費方式可能會變動，請以 Google 官方頁面為準。
-
-在公開專案中，不要提供自己的 API Key 給其他人使用。
+丟到 Gemini 、 Chatgpt 、Claude 問ai
