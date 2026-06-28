@@ -16,13 +16,13 @@
 
 進入你要閱讀或分析的 Ulearn 頁面，確認右下角有 AI Screenshot Helper 的浮動按鈕。
 
-![開啟 Ulearn 頁面](../新增資料夾/step甲.jpg)
+![開啟 Ulearn 頁面](../Sample%20image/step甲.jpg)
 
 ## 2. 點開 AI Screenshot Helper
 
 點開右下角的浮動按鈕，確認面板可以正常顯示。
 
-![開啟 AI Screenshot Helper 面板](../新增資料夾/step乙.jpg)
+![開啟 AI Screenshot Helper 面板](../Sample%20image/step乙.jpg)
 
 ## 3. 選取要分析的畫面
 
@@ -30,7 +30,7 @@
 
 建議只選取你需要分析的範圍，不要截整個頁面，這樣 Gemini 比較容易理解重點，也比較不容易遇到 token 或內容過長問題。
 
-![框選 Ulearn 畫面](../新增資料夾/step丙.jpg)
+![框選 Ulearn 畫面](../Sample%20image/step丙.jpg)
 
 ## 4. 輸入問題並送出
 
@@ -42,7 +42,7 @@
 請幫我整理這段內容的重點。
 ```
 
-![送出問題給 Gemini](../新增資料夾/step丁.jpg)
+![送出問題給 Gemini](../Sample%20image/step丁.jpg)
 
 ## 使用建議
 
