@@ -5,15 +5,6 @@ AI Screenshot Helper 是一個 Chrome 擴充功能，可以讓你在網頁上框
 > [!IMPORTANT]
 > 本軟體僅供教育研究用途。使用者需自行確認使用情境是否合法、是否符合學校或平台規範，並自行承擔使用本工具所產生的責任。
 
-## 功能特色
-
-- 在網頁右下角顯示可拖曳的 AI 浮動面板。
-- 支援選取網頁局部畫面截圖。
-- 可以輸入問題，搭配截圖送到 Gemini 分析。
-- 可自訂 Gemini 模型名稱。
-- Gemini API Key 只會儲存在本機 Chrome 擴充功能儲存空間。
-- 支援快捷鍵 `Ctrl+Shift+1` 開始截圖。
-
 ## 教學文件
 
 - [如何申請 Gemini API Key](docs/GEMINI_API_KEY.md)
