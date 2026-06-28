@@ -1,17 +1,23 @@
 # AI Screenshot Helper
 
-AI Screenshot Helper 是一個 Chrome 擴充功能，可以讓你在網頁上選取一塊畫面截圖，並把截圖和你的問題一起送到 Gemini Vision 進行分析。
+AI Screenshot Helper 是一個 Chrome 擴充功能，可以讓你在網頁上框選畫面截圖，並把截圖和你的問題一起送到 Gemini Vision 進行分析。
 
-這個專案不需要建置流程，下載後可以直接用 Chrome 的「載入未封裝項目」安裝。
+> [!IMPORTANT]
+> 本軟體僅供教育研究用途。使用者需自行確認使用情境是否合法、是否符合學校或平台規範，並自行承擔使用本工具所產生的責任。
 
-## 功能
+## 功能特色
 
-- 在網頁右下角顯示可拖曳的浮動 AI 面板。
-- 支援選取網頁局部區域截圖。
+- 在網頁右下角顯示可拖曳的 AI 浮動面板。
+- 支援選取網頁局部畫面截圖。
 - 可以輸入問題，搭配截圖送到 Gemini 分析。
 - 可自訂 Gemini 模型名稱。
-- Gemini API Key 只會儲存在本機 Chrome extension storage。
+- Gemini API Key 只會儲存在本機 Chrome 擴充功能儲存空間。
 - 支援快捷鍵 `Ctrl+Shift+1` 開始截圖。
+
+## 教學文件
+
+- [如何申請 Gemini API Key](docs/GEMINI_API_KEY.md)
+- [Ulearn 使用示範](docs/ULEARN_USAGE.md)
 
 ## 從零開始安裝
 
@@ -37,13 +43,21 @@ chrome://extensions
 
 在右上角打開 **開發人員模式**。
 
+![開啟 Chrome 擴充功能開發人員模式](新增資料夾/stepA.jpg)
+
 ### 4. 載入未封裝項目
 
-點選 **載入未封裝項目**，選擇這個專案資料夾。
+點選 **載入未封裝項目**。
 
-請選擇包含 `manifest.json` 的那一層資料夾。
+![點選載入未封裝項目](新增資料夾/stepB.jpg)
 
-### 5. 設定 Gemini API Key
+### 5. 選擇專案資料夾
+
+選擇這個專案資料夾，也就是包含 `manifest.json` 的那一層資料夾。
+
+![選擇擴充功能資料夾](新增資料夾/stepC.jpg)
+
+### 6. 設定 Gemini API Key
 
 安裝完成後，打開任意一般網頁，右下角會出現 AI Screenshot Helper 的小按鈕。
 
@@ -53,7 +67,7 @@ chrome://extensions
 
 [如何申請 Gemini API Key](docs/GEMINI_API_KEY.md)
 
-### 6. 開始使用
+### 7. 開始使用
 
 1. 開啟任意一般網頁。
 2. 點開右下角的 AI Screenshot Helper。
@@ -61,6 +75,10 @@ chrome://extensions
 4. 用滑鼠拖曳選取想分析的畫面區域。
 5. 輸入你的問題。
 6. 按 **送出**，等待 Gemini 回覆。
+
+更完整的操作示範請看：
+
+[Ulearn 使用示範](docs/ULEARN_USAGE.md)
 
 ## Gemini 模型設定
 
@@ -93,6 +111,46 @@ Gemini API Key 只會儲存在 Chrome 的本機擴充功能儲存空間，也就
 
 只有在你按下 **送出** 時，截圖內容與文字問題才會送到 Google Gemini API。
 
+## 常見問題
+
+### Gemini API 顯示 high demand
+
+如果出現類似訊息：
+
+```text
+This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+```
+
+代表目前模型需求量較高，通常是暫時性的。你可以稍後再試，或改用其他可用模型。
+
+### 回覆被中斷或內容不完整
+
+可能是模型負載過高、輸入內容太長，或截圖中的資訊太多。可以嘗試：
+
+- 縮小截圖範圍，只截需要分析的區塊。
+- 簡化問題。
+- 稍後再送出一次。
+
+### 出現 token 或內容長度相關錯誤
+
+請減少截圖範圍或縮短提問文字。截圖越大、文字越多，模型需要處理的內容就越多。
+
+### 模型名稱不能使用
+
+如果你填的模型名稱無法使用，請改回：
+
+```text
+gemini-flash-latest
+```
+
+或嘗試：
+
+```text
+gemini-2.5-flash
+```
+
+可用模型會依 Google 帳號、地區、API 狀態而不同。
+
 ## 專案結構
 
 ```text
@@ -104,8 +162,23 @@ Gemini API Key 只會儲存在 Chrome 的本機擴充功能儲存空間，也就
 ├── ui.html
 ├── README.md
 ├── LICENSE
-└── docs/
-    └── GEMINI_API_KEY.md
+├── docs/
+│   ├── GEMINI_API_KEY.md
+│   └── ULEARN_USAGE.md
+└── 新增資料夾/
+    ├── step1.jpg
+    ├── step2.jpg
+    ├── step3.jpg
+    ├── step4.jpg
+    ├── step5.jpg
+    ├── step5-1.jpg
+    ├── stepA.jpg
+    ├── stepB.jpg
+    ├── stepC.jpg
+    ├── step甲.jpg
+    ├── step乙.jpg
+    ├── step丙.jpg
+    └── step丁.jpg
 ```
 
 ## 開發方式
